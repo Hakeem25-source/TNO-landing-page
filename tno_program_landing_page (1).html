@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The New Oil (TNO) Program - Master Digital & Affiliate Income</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind Custom Configuration -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0B0F19',
+                            card: '#111827',
+                            border: '#1F2937',
+                            gold: '#F59E0B',
+                            goldHover: '#D97706',
+                            blue: '#3B82F6',
+                            blueDark: '#1D4ED8',
+                            green: '#10B981',
+                            greenHover: '#059669'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0B0F19;
+            color: #F3F4F6;
+        }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #FBBF24 0%, #F59E0B 50%, #D97706 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .blue-gradient-text {
+            background: linear-gradient(135deg, #60A5FA 0%, #3B82F6 50%, #1D4ED8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gold-glow {
+            box-shadow: 0 0 25px -5px rgba(245, 158, 11, 0.3);
+        }
+        .blue-glow {
+            box-shadow: 0 0 25px -5px rgba(59, 130, 246, 0.3);
+        }
+        .glass-card {
+            background: rgba(17, 24, 39, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glass-card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-card-hover:hover {
+            transform: translateY(-4px);
+            border-color: rgba(245, 158, 11, 0.4);
+            box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.5);
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0B0F19;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1F2937;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #374151;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-brand-gold selection:text-black">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-gradient-to-r from-brand-gold via-amber-500 to-brand-gold text-black text-xs md:text-sm font-bold py-2 px-4 text-center sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto flex items-center justify-center gap-2">
+            <span class="bg-black text-brand-gold text-[10px] uppercase tracking-widest px-2 py-0.5 rounded-full font-black">Official Grodital Partner</span>
+            <span>⚡ TNO Special Enrollment Discount Active Today! Limited Slots Available.</span>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="border-b border-gray-800 bg-brand-dark/90 backdrop-blur-md sticky top-8 z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Brand Logo -->
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-gold to-amber-300 flex items-center justify-center font-black text-black text-xl shadow-lg shadow-amber-500/20">
+                        TNO
+                    </div>
+                    <div>
+                        <span class="font-extrabold text-lg tracking-tight text-white block leading-none">The New Oil</span>
+                        <span class="text-[10px] text-gray-400 tracking-wider uppercase font-semibold">Hosted on Grodital</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Nav Links -->
+                <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-300">
+                    <a href="#about" class="hover:text-brand-gold transition-colors">Overview</a>
+                    <a href="#modules" class="hover:text-brand-gold transition-colors">Curriculum</a>
+                    <a href="#calculator" class="hover:text-brand-gold transition-colors">Earnings Calculator</a>
+                    <a href="#testimonials" class="hover:text-brand-gold transition-colors">Success Stories</a>
+                    <a href="#faq" class="hover:text-brand-gold transition-colors">FAQ</a>
+                </div>
+
+                <!-- Header Action Buttons -->
+                <div class="flex items-center gap-3">
+                    <button onclick="openLinkSettingsModal()" title="Configure Custom Links" class="p-2 text-gray-400 hover:text-brand-gold transition-colors rounded-lg border border-gray-800 hover:border-brand-gold/40">
+                        <i class="fa-solid fa-gear text-base"></i>
+                    </button>
+                    <a href="#enroll" class="hidden sm:inline-flex items-center gap-2 bg-gradient-to-r from-brand-gold to-amber-500 hover:from-amber-400 hover:to-brand-gold text-black font-extrabold px-5 py-2.5 rounded-xl shadow-lg transition-all transform hover:-translate-y-0.5 text-sm">
+                        <span>Get TNO Blueprint</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden">
+        <!-- Background Glows -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-gold/10 rounded-full blur-[140px] pointer-events-none"></div>
+        <div class="absolute top-1/3 right-10 w-[300px] h-[300px] bg-brand-blue/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Hero Left Column Text -->
+                <div class="lg:col-span-7 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-gold/10 border border-brand-gold/30 text-brand-gold text-xs font-semibold mb-6">
+                        <i class="fa-solid fa-fire text-brand-gold animate-pulse"></i>
+                        <span>Turn Your Smartphone Into A Daily Revenue Stream</span>
+                    </div>
+
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.15] mb-6">
+                        Stop Browsing Social Media For Free. Start Tapping Into <span class="gold-gradient-text">"The New Oil"</span>
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-gray-300 mb-8 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+                        Master high-demand digital skills, organic lead generation, and automated affiliate sales on Grodital. Step-by-step guidance designed specifically for beginners with zero prior experience.
+                    </p>
+
+                    <!-- CTAs -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-10">
+                        <button onclick="goToGroditalCheckout()" class="w-full sm:w-auto min-w-[220px] bg-gradient-to-r from-brand-gold via-amber-500 to-brand-gold hover:opacity-95 text-black font-extrabold text-base px-8 py-4 rounded-xl shadow-xl gold-glow transition-all transform hover:-translate-y-1 flex items-center justify-center gap-3">
+                            <i class="fa-solid fa-rocket"></i>
+                            <span>ENROLL NOW ON GRODITAL</span>
+                        </button>
+
+                        <button onclick="openWhatsAppChat()" class="w-full sm:w-auto min-w-[200px] bg-gray-900 hover:bg-gray-800 text-brand-green border border-brand-green/40 hover:border-brand-green font-bold text-base px-6 py-4 rounded-xl shadow-md transition-all flex items-center justify-center gap-3">
+                            <i class="fa-brands fa-whatsapp text-xl"></i>
+                            <span>Chat on WhatsApp</span>
+                        </button>
+                    </div>
+
+                    <!-- Micro Trust Metrics -->
+                    <div class="pt-6 border-t border-gray-800/80 grid grid-cols-3 gap-4 text-center lg:text-left">
+                        <div>
+                            <div class="text-xl sm:text-2xl font-black text-white">100%</div>
+                            <div class="text-xs text-gray-400">Smartphone Ready</div>
+                        </div>
+                        <div>
+                            <div class="text-xl sm:text-2xl font-black text-brand-gold">Flexible</div>
+                            <div class="text-xs text-gray-400">2-3 Hours Daily</div>
+                        </div>
+                        <div>
+                            <div class="text-xl sm:text-2xl font-black text-brand-blue">Instant</div>
+                            <div class="text-xs text-gray-400">MoMo / Card Payouts</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Right Column Visual Card -->
+                <div class="lg:col-span-5">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <!-- Decorative Frame -->
+                        <div class="absolute -inset-1 bg-gradient-to-r from-brand-gold to-brand-blue rounded-3xl blur opacity-30"></div>
+                        
+                        <div class="relative bg-brand-card border border-gray-800 rounded-3xl p-6 sm:p-8 shadow-2xl">
+                            <!-- Card Header -->
+                            <div class="flex items-center justify-between pb-6 border-b border-gray-800">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-12 h-12 rounded-2xl bg-brand-gold/10 border border-brand-gold/30 flex items-center justify-center text-brand-gold text-2xl font-black">
+                                        🛢️
+                                    </div>
+                                    <div>
+                                        <h3 class="font-bold text-white text-base">TNO Masterclass</h3>
+                                        <p class="text-xs text-gray-400">Verified Grodital Blueprint</p>
+                                    </div>
+                                </div>
+                                <span class="px-3 py-1 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-bold rounded-full flex items-center gap-1.5">
+                                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+                                    Open
+                                </span>
+                            </div>
+
+                            <!-- Highlights Inside Hero Card -->
+                            <div class="py-6 space-y-4">
+                                <div class="flex items-start gap-3 p-3 rounded-xl bg-gray-900/60 border border-gray-800">
+                                    <div class="p-2 rounded-lg bg-brand-gold/10 text-brand-gold font-bold text-sm">01</div>
+                                    <div>
+                                        <h4 class="text-sm font-bold text-gray-200">Affiliate Marketing Essentials</h4>
+                                        <p class="text-xs text-gray-400">How to pick hot products on Grodital and position them for instant sales.</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start gap-3 p-3 rounded-xl bg-gray-900/60 border border-gray-800">
+                                    <div class="p-2 rounded-lg bg-brand-blue/10 text-brand-blue font-bold text-sm">02</div>
+                                    <div>
+                                        <h4 class="text-sm font-bold text-gray-200">High-Converting Traffic Systems</h4>
+                                        <p class="text-xs text-gray-400">Attract interested buyers using TikTok, WhatsApp, and Facebook without paid ads.</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start gap-3 p-3 rounded-xl bg-gray-900/60 border border-gray-800">
+                                    <div class="p-2 rounded-lg bg-emerald-500/10 text-emerald-400 font-bold text-sm">03</div>
+                                    <div>
+                                        <h4 class="text-sm font-bold text-gray-200">Automated Sales Funnels</h4>
+                                        <p class="text-xs text-gray-400">Convert cold leads into paying students 24/7 with proven script templates.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Hero Card Footer CTA -->
+                            <div class="pt-4 border-t border-gray-800 flex items-center justify-between text-xs text-gray-400">
+                                <span>Includes Lifetime Access</span>
+                                <span class="text-brand-gold font-bold flex items-center gap-1">
+                                    <i class="fa-solid fa-shield-halved"></i> 100% Verified Access
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem vs Solution Section -->
+    <section id="about" class="py-20 bg-gray-950 border-y border-gray-800 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs uppercase tracking-widest font-extrabold text-brand-gold mb-3">Why TNO Was Created</h2>
+                <p class="text-2xl sm:text-4xl font-black text-white">Tired Of Trying To Figure Out Online Business Alone?</p>
+                <p class="text-gray-400 mt-4 text-sm sm:text-base">Most beginners fail not because they lack effort, but because they lack a step-by-step roadmap designed for the African & global digital market.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+                <!-- The Old Way (Problem) -->
+                <div class="glass-card p-8 rounded-3xl border-red-500/20 relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-2 h-full bg-red-500/80"></div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-xl bg-red-500/10 text-red-400 flex items-center justify-center font-bold text-lg">
+                            <i class="fa-solid fa-xmark"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Without TNO Program</h3>
+                    </div>
+                    <ul class="space-y-4 text-sm text-gray-300">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-xmark text-red-400 mt-1"></i>
+                            <span>Posting products endlessly on your WhatsApp status with zero sales.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-xmark text-red-400 mt-1"></i>
+                            <span>Wasting money on expensive laptops or complex software you don't need.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-xmark text-red-400 mt-1"></i>
+                            <span>No mentorship or active community to guide you when stuck.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-xmark text-red-400 mt-1"></i>
+                            <span>Falling for scam schemes that offer no real digital skills.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- The TNO Way (Solution) -->
+                <div class="glass-card p-8 rounded-3xl border-brand-gold/40 relative overflow-hidden bg-gradient-to-br from-brand-card to-amber-950/20">
+                    <div class="absolute top-0 left-0 w-2 h-full bg-brand-gold"></div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-xl bg-brand-gold/20 text-brand-gold flex items-center justify-center font-bold text-lg">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">The TNO Blueprint Way</h3>
+                    </div>
+                    <ul class="space-y-4 text-sm text-gray-200">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-brand-gold mt-1"></i>
+                            <span>Attract organic, high-converting buyers daily using free smartphone methods.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-brand-gold mt-1"></i>
+                            <span>Operate 100% with your phone—no expensive tech stack required.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-brand-gold mt-1"></i>
+                            <span>Direct support group, weekly live calls, and continuous mentorship.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-brand-gold mt-1"></i>
+                            <span>Master real, transferable high-income digital skills that payout to your MoMo/Bank.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program Highlights / Modules -->
+    <section id="modules" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs uppercase tracking-widest font-extrabold text-brand-gold mb-3">Comprehensive Curriculum</h2>
+                <p class="text-3xl sm:text-4xl font-black text-white">What You Will Master Inside TNO</p>
+                <p class="text-gray-400 mt-3 text-sm">Everything is broken down into simple, digestible video lessons and action blueprints.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Card 1 -->
+                <div class="glass-card p-6 rounded-2xl glass-card-hover border border-gray-800">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl mb-5">
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Module 1: Mindset & Smartphone Setup</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed">Prepare your phone and profile to operate as a high-converting business hub. Learn how to optimize your digital presence for trust.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="glass-card p-6 rounded-2xl glass-card-hover border border-gray-800">
+                    <div class="w-12 h-12 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center text-xl mb-5">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Module 2: Grodital & Affiliate Mastery</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed">Learn how to navigate Grodital, select high-demand offers, generate your affiliate links, and track commissions effortlessly.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="glass-card p-6 rounded-2xl glass-card-hover border border-gray-800">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xl mb-5">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Module 3: Organic Traffic Generation</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed">Discover how to attract hundreds of interested leads from TikTok, Instagram, and Facebook daily without spending 1 cent on paid ads.</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="glass-card p-6 rounded-2xl glass-card-hover border border-gray-800">
+                    <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center text-xl mb-5">
+                        <i class="fa-solid fa-comments text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Module 4: WhatsApp Sales Automation</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed">Turn your WhatsApp into an automated sales machine. Copy-paste script templates that convert cold leads into ready buyers.</p>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="glass-card p-6 rounded-2xl glass-card-hover border border-gray-800">
+                    <div class="w-12 h-12 rounded-xl bg-rose-500/10 text-rose-400 flex items-center justify-center text-xl mb-5">
+                        <i class="fa-solid fa-bullseye"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Module 5: Objection Handling & Closing</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed">Never get stuck when a prospect asks "I don't have money" or "Is this real?". Master the art of closing sales with confidence.</p>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="glass-card p-6 rounded-2xl glass-card-hover border border-gray-800">
+                    <div class="w-12 h-12 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center text-xl mb-5">
+                        <i class="fa-solid fa-handshake-angle"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Module 6: Community & Live Mentorship</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed">Get lifetime access to the active student community, weekly live Q&A webinars, and continuous strategy updates.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Potential Calculator -->
+    <section id="calculator" class="py-16 bg-gray-950 border-y border-gray-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-xs uppercase tracking-widest font-extrabold text-brand-gold mb-2">Interactive Tool</h2>
+            <p class="text-2xl sm:text-3xl font-black text-white mb-4">Calculate Your Affiliate Potential</p>
+            <p class="text-xs sm:text-sm text-gray-400 mb-8 max-w-xl mx-auto">See how consistent daily lead conversions with TNO skills on Grodital translate into potential weekly & monthly income.</p>
+
+            <div class="glass-card p-6 sm:p-8 rounded-3xl border border-brand-gold/30 text-left max-w-2xl mx-auto shadow-2xl">
+                <!-- Slider input -->
+                <div class="mb-8">
+                    <div class="flex justify-between items-center mb-3">
+                        <label for="salesSlider" class="text-sm font-bold text-gray-200">Daily Sales / Referrals:</label>
+                        <span id="salesValue" class="text-lg font-black text-brand-gold bg-brand-gold/10 px-3 py-1 rounded-lg border border-brand-gold/30">2 Sales / Day</span>
+                    </div>
+                    <input type="range" id="salesSlider" min="1" max="15" value="2" class="w-full h-2 bg-gray-800 rounded-lg appearance-none cursor-pointer accent-amber-500">
+                    <div class="flex justify-between text-[11px] text-gray-500 mt-2">
+                        <span>1 Sale/Day</span>
+                        <span>5 Sales/Day</span>
+                        <span>10 Sales/Day</span>
+                        <span>15 Sales/Day</span>
+                    </div>
+                </div>
+
+                <!-- Currency Picker -->
+                <div class="mb-6 flex items-center gap-3 bg-gray-900/80 p-3 rounded-xl border border-gray-800">
+                    <span class="text-xs font-semibold text-gray-400">Select Currency Standard:</span>
+                    <select id="currencySelect" class="bg-gray-800 text-white text-xs font-bold py-1.5 px-3 rounded-lg border border-gray-700 focus:outline-none focus:border-brand-gold">
+                        <option value="GHS">GHS (Ghanaian Cedi)</option>
+                        <option value="NGN">NGN (Nigerian Naira)</option>
+                        <option value="USD">USD (US Dollar)</option>
+                    </select>
+                </div>
+
+                <!-- Calculation Output Grid -->
+                <div class="grid grid-cols-2 gap-4 pt-4 border-t border-gray-800">
+                    <div class="p-4 rounded-xl bg-gray-900/60 border border-gray-800">
+                        <span class="text-xs text-gray-400 font-medium block mb-1">Potential Weekly Income</span>
+                        <span id="weeklyEarnings" class="text-xl sm:text-2xl font-black text-white">GHS 1,400</span>
+                    </div>
+                    <div class="p-4 rounded-xl bg-brand-gold/10 border border-brand-gold/30">
+                        <span class="text-xs text-brand-gold font-bold block mb-1">Potential Monthly Income</span>
+                        <span id="monthlyEarnings" class="text-xl sm:text-2xl font-black text-brand-gold">GHS 5,600</span>
+                    </div>
+                </div>
+
+                <p class="text-[10px] text-gray-500 text-center mt-4">
+                    *Estimates based on an average affiliate commission benchmark of ~GHS 100 ($10 USD) per sale. Results depend on individual execution and effort.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof / Testimonials -->
+    <section id="testimonials" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs uppercase tracking-widest font-extrabold text-brand-gold mb-3">Proof of Execution</h2>
+                <p class="text-3xl sm:text-4xl font-black text-white">Real Results From Real TNO Students</p>
+                <p class="text-gray-400 mt-3 text-sm">Every single day, ordinary students and workers use the TNO blueprint to generate extra income.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <!-- Testimonial 1 -->
+                <div class="glass-card p-6 rounded-2xl border border-gray-800 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-brand-gold text-xs mb-4">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-xs sm:text-sm text-gray-300 italic mb-6 leading-relaxed">
+                            "I was skeptical because I had no tech background. But TNO's WhatsApp automation templates made everything easy. I made my first 3 affiliate sales in my second week!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-gray-800">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-brand-gold to-amber-300 font-bold text-black flex items-center justify-center text-sm">
+                            KW
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold text-white">Kwame A.</h4>
+                            <span class="text-[11px] text-gray-400">Kumasi, Ghana</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="glass-card p-6 rounded-2xl border border-gray-800 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-brand-gold text-xs mb-4">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-xs sm:text-sm text-gray-300 italic mb-6 leading-relaxed">
+                            "The Grodital platform payout process is so smooth. Money goes straight to my Mobile Money wallet. What I love most about TNO is the active community mentor support."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-gray-800">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-brand-blue to-cyan-300 font-bold text-white flex items-center justify-center text-sm">
+                            CN
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold text-white">Chidimma N.</h4>
+                            <span class="text-[11px] text-gray-400">Lagos, Nigeria</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="glass-card p-6 rounded-2xl border border-gray-800 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-brand-gold text-xs mb-4">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-xs sm:text-sm text-gray-300 italic mb-6 leading-relaxed">
+                            "Combining organic TikTok traffic with TNO's scripts gave me over 40+ WhatsApp leads in one weekend. This course pays for itself quickly!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-gray-800">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-emerald-500 to-teal-300 font-bold text-black flex items-center justify-center text-sm">
+                            EB
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold text-white">Emmanuel B.</h4>
+                            <span class="text-[11px] text-gray-400">Accra, Ghana</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Accordion -->
+    <section id="faq" class="py-20 bg-gray-950 border-t border-gray-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14">
+                <h2 class="text-xs uppercase tracking-widest font-extrabold text-brand-gold mb-3">Got Questions?</h2>
+                <p class="text-3xl font-black text-white">Frequently Asked Questions</p>
+            </div>
+
+            <div class="space-y-4">
+                
+                <!-- FAQ Item 1 -->
+                <div class="glass-card rounded-2xl border border-gray-800 overflow-hidden">
+                    <button onclick="toggleFaq('faq1')" class="w-full text-left p-5 flex justify-between items-center font-bold text-sm sm:text-base text-white hover:text-brand-gold transition-colors">
+                        <span>Do I need a laptop to start the TNO Program?</span>
+                        <i id="faq1-icon" class="fa-solid fa-chevron-down text-xs text-gray-400 transition-transform"></i>
+                    </button>
+                    <div id="faq1" class="hidden px-5 pb-5 text-xs sm:text-sm text-gray-400 leading-relaxed border-t border-gray-800/50 pt-3">
+                        No laptop required! The entire TNO Program is specifically optimized for Android and iPhone smartphones. All lead generation, WhatsApp automation, and Grodital payout management are executed directly from your phone.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="glass-card rounded-2xl border border-gray-800 overflow-hidden">
+                    <button onclick="toggleFaq('faq2')" class="w-full text-left p-5 flex justify-between items-center font-bold text-sm sm:text-base text-white hover:text-brand-gold transition-colors">
+                        <span>How do payments work on Grodital?</span>
+                        <i id="faq2-icon" class="fa-solid fa-chevron-down text-xs text-gray-400 transition-transform"></i>
+                    </button>
+                    <div id="faq2" class="hidden px-5 pb-5 text-xs sm:text-sm text-gray-400 leading-relaxed border-t border-gray-800/50 pt-3">
+                        Grodital supports instant, secure local payment methods including Mobile Money (MTN, Vodafone/Telecel, AirtelTigo), Bank Transfer, and Debit/Credit Cards. Once you enroll, your access token is issued immediately.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="glass-card rounded-2xl border border-gray-800 overflow-hidden">
+                    <button onclick="toggleFaq('faq3')" class="w-full text-left p-5 flex justify-between items-center font-bold text-sm sm:text-base text-white hover:text-brand-gold transition-colors">
+                        <span>What if I have zero sales or marketing experience?</span>
+                        <i id="faq3-icon" class="fa-solid fa-chevron-down text-xs text-gray-400 transition-transform"></i>
+                    </button>
+                    <div id="faq3" class="hidden px-5 pb-5 text-xs sm:text-sm text-gray-400 leading-relaxed border-t border-gray-800/50 pt-3">
+                        TNO was specifically created for absolute beginners. You get step-by-step video lessons, ready-made copy scripts, image templates, and direct community mentor support so you never have to guess what to do next.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="glass-card rounded-2xl border border-gray-800 overflow-hidden">
+                    <button onclick="toggleFaq('faq4')" class="w-full text-left p-5 flex justify-between items-center font-bold text-sm sm:text-base text-white hover:text-brand-gold transition-colors">
+                        <span>How soon can I start getting sales?</span>
+                        <i id="faq4-icon" class="fa-solid fa-chevron-down text-xs text-gray-400 transition-transform"></i>
+                    </button>
+                    <div id="faq4" class="hidden px-5 pb-5 text-xs sm:text-sm text-gray-400 leading-relaxed border-t border-gray-800/50 pt-3">
+                        Results depend on how fast you implement the training modules. Many students who follow the daily organic traffic system consistently start seeing their first leads and sales within their first 7 to 14 days.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Final High-Converting Offer Section -->
+    <section id="enroll" class="py-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-brand-gold/5 to-transparent pointer-events-none"></div>
+
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div class="glass-card p-8 sm:p-12 rounded-3xl border border-brand-gold/40 gold-glow">
+                
+                <span class="inline-block px-4 py-1.5 rounded-full bg-brand-gold/20 text-brand-gold text-xs font-black uppercase tracking-wider mb-6">
+                    ⚡ Enrollment Is Currently Open
+                </span>
+
+                <h2 class="text-3xl sm:text-5xl font-black text-white mb-6">
+                    Ready To Master <span class="gold-gradient-text">The New Oil</span> Blueprint?
+                </h2>
+
+                <p class="text-sm sm:text-base text-gray-300 max-w-2xl mx-auto mb-8">
+                    Gain instant lifetime access to the full TNO training program on Grodital, bonus closing scripts, organic traffic templates, and access to our private mentorship community.
+                </p>
+
+                <!-- Pricing Display -->
+                <div class="mb-10 p-6 bg-gray-900/90 rounded-2xl border border-gray-800 max-w-md mx-auto">
+                    <div class="text-xs text-gray-400 uppercase tracking-widest mb-1">Discounted Enrollment Fee</div>
+                    <div class="flex items-center justify-center gap-3">
+                        <span class="text-3xl sm:text-4xl font-black text-brand-gold" id="displayPrice">GHS 350</span>
+                        <span class="text-sm text-gray-500 line-through" id="regularPrice">GHS 700</span>
+                    </div>
+                    <p class="text-[11px] text-emerald-400 font-semibold mt-2">
+                        <i class="fa-solid fa-tags"></i> Save 50% when you complete registration on Grodital today.
+                    </p>
+                </div>
+
+                <!-- CTA Action Button Container -->
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <button onclick="goToGroditalCheckout()" class="w-full sm:w-auto bg-gradient-to-r from-brand-gold via-amber-500 to-brand-gold text-black font-black text-base px-10 py-5 rounded-xl shadow-2xl gold-glow transition-all transform hover:scale-105 flex items-center justify-center gap-3">
+                        <i class="fa-solid fa-lock text-sm"></i>
+                        <span>SECURE YOUR SPOT ON GRODITAL</span>
+                    </button>
+
+                    <button onclick="openWhatsAppChat()" class="w-full sm:w-auto bg-gray-900 hover:bg-gray-800 text-brand-green border border-brand-green/40 font-extrabold text-base px-8 py-5 rounded-xl shadow-lg transition-all flex items-center justify-center gap-3">
+                        <i class="fa-brands fa-whatsapp text-2xl"></i>
+                        <span>Ask Questions on WhatsApp</span>
+                    </button>
+                </div>
+
+                <!-- Guarantee Notice -->
+                <div class="mt-8 flex items-center justify-center gap-2 text-xs text-gray-400">
+                    <i class="fa-solid fa-shield-halved text-brand-gold"></i>
+                    <span>Official Grodital Payment Gateway • Instant Access Delivered After Payment</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-800 py-10 bg-gray-950 text-xs text-gray-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+                <p class="font-bold text-gray-300">The New Oil (TNO) Program</p>
+                <p class="mt-1">Independent Affiliate Landing Page. Hosted on Grodital Payment System.</p>
+            </div>
+            <div class="flex gap-6">
+                <button onclick="openLinkSettingsModal()" class="hover:text-brand-gold transition-colors">Configure Affiliate Links</button>
+                <a href="#about" class="hover:text-gray-300">Overview</a>
+                <a href="#faq" class="hover:text-gray-300">FAQ</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- STICKY DUAL CTA BAR FOR MOBILE -->
+    <div class="fixed bottom-0 left-0 right-0 bg-brand-dark/95 border-t border-gray-800 p-3 z-40 sm:hidden backdrop-blur-lg">
+        <div class="flex gap-2">
+            <a href="https://wa.link/ct7epg" target="_blank" class="flex-1 bg-gray-900 text-brand-green border border-brand-green/40 py-3 rounded-xl font-bold text-xs flex items-center justify-center gap-2">
+                <i class="fa-brands fa-whatsapp text-lg"></i>
+                <span>WhatsApp</span>
+            </a>
+            <a href="https://app.grodital.com/product/017we19m?ref=gru73ea8f" target="_blank" class="flex-[2] bg-gradient-to-r from-brand-gold to-amber-500 text-black py-3 rounded-xl font-extrabold text-xs shadow-lg flex items-center justify-center gap-2">
+                <span>ENROLL NOW</span>
+                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- LINK CONFIGURATION MODAL (Allows user to paste their own Grodital & WhatsApp links easily) -->
+    <div id="linkModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-brand-card border border-gray-800 rounded-3xl p-6 sm:p-8 max-w-md w-full shadow-2xl relative">
+            <button onclick="closeLinkSettingsModal()" class="absolute top-5 right-5 text-gray-400 hover:text-white">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-10 h-10 rounded-xl bg-brand-gold/10 text-brand-gold flex items-center justify-center">
+                    <i class="fa-solid fa-sliders text-lg"></i>
+                </div>
+                <div>
+                    <h3 class="font-bold text-white text-base">Affiliate Link Setup</h3>
+                    <p class="text-xs text-gray-400">Insert your Grodital & WhatsApp link below</p>
+                </div>
+            </div>
+
+            <div class="space-y-4 mb-6 text-left">
+                <div>
+                    <label class="block text-xs font-bold text-gray-300 mb-1">Your Grodital TNO Affiliate URL:</label>
+                    <input type="url" id="customGroditalUrl" placeholder="https://grodital.com/checkout/tno?ref=yourname" class="w-full bg-gray-900 border border-gray-800 rounded-xl p-3 text-xs text-white focus:outline-none focus:border-brand-gold">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-gray-300 mb-1">Your WhatsApp Number (with country code):</label>
+                    <input type="text" id="customWhatsAppNum" placeholder="233XXXXXXXXX or 234XXXXXXXXX" class="w-full bg-gray-900 border border-gray-800 rounded-xl p-3 text-xs text-white focus:outline-none focus:border-brand-gold">
+                </div>
+            </div>
+
+            <button onclick="saveLinkSettings()" class="w-full bg-brand-gold text-black font-extrabold py-3.5 rounded-xl text-sm hover:bg-amber-400 transition-colors">
+                Save & Update Page Links
+            </button>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Hardcoded Grodital Affiliate & WhatsApp Links
+        let groditalAffiliateLink = "https://app.grodital.com/product/017we19m?ref=gru73ea8f";
+        let whatsAppLink = "https://wa.link/ct7epg";
+
+        // Load stored link settings if available, defaulting to hardcoded affiliate URLs
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedGrodital = localStorage.getItem('tno_grodital_link');
+            const savedWA = localStorage.getItem('tno_wa_link');
+
+            if (savedGrodital) {
+                groditalAffiliateLink = savedGrodital;
+                document.getElementById('customGroditalUrl').value = savedGrodital;
+            } else {
+                document.getElementById('customGroditalUrl').value = groditalAffiliateLink;
+            }
+
+            if (savedWA) {
+                whatsAppLink = savedWA;
+                document.getElementById('customWhatsAppNum').value = savedWA;
+            } else {
+                document.getElementById('customWhatsAppNum').value = whatsAppLink;
+            }
+
+            // Initialize earnings calculator
+            updateCalculator();
+        });
+
+        // Redirect Functions
+        function goToGroditalCheckout() {
+            window.open(groditalAffiliateLink, '_blank');
+        }
+
+        function openWhatsAppChat() {
+            window.open(whatsAppLink, '_blank');
+        }
+
+        // Modal Controls
+        function openLinkSettingsModal() {
+            document.getElementById('linkModal').classList.remove('hidden');
+        }
+        function closeLinkSettingsModal() {
+            document.getElementById('linkModal').classList.add('hidden');
+        }
+
+        function saveLinkSettings() {
+            const groditalInput = document.getElementById('customGroditalUrl').value.trim();
+            const waInput = document.getElementById('customWhatsAppNum').value.trim();
+
+            if (groditalInput) {
+                groditalAffiliateLink = groditalInput;
+                localStorage.setItem('tno_grodital_link', groditalInput);
+            }
+            if (waInput) {
+                whatsAppLink = waInput;
+                localStorage.setItem('tno_wa_link', waInput);
+            }
+
+            closeLinkSettingsModal();
+            showNotice('Links updated successfully!');
+        }
+
+        // FAQ Toggle Logic
+        function toggleFaq(id) {
+            const el = document.getElementById(id);
+            const icon = document.getElementById(`${id}-icon`);
+            
+            if (el.classList.contains('hidden')) {
+                el.classList.remove('hidden');
+                icon.classList.add('rotate-180');
+            } else {
+                el.classList.add('hidden');
+                icon.classList.remove('rotate-180');
+            }
+        }
+
+        // Calculator Interactive Logic
+        const salesSlider = document.getElementById('salesSlider');
+        const salesValue = document.getElementById('salesValue');
+        const currencySelect = document.getElementById('currencySelect');
+        const weeklyEarnings = document.getElementById('weeklyEarnings');
+        const monthlyEarnings = document.getElementById('monthlyEarnings');
+        const displayPrice = document.getElementById('displayPrice');
+        const regularPrice = document.getElementById('regularPrice');
+
+        // Multipliers & Rates
+        const rates = {
+            GHS: { perSale: 100, symbol: 'GHS ', price: 'GHS 350', regular: 'GHS 700' },
+            NGN: { perSale: 10000, symbol: '₦', price: '₦35,000', regular: '₦70,000' },
+            USD: { perSale: 10, symbol: '$', price: '$25', regular: '$50' }
+        };
+
+        function updateCalculator() {
+            const sales = parseInt(salesSlider.value);
+            const curr = currencySelect.value;
+            const rateObj = rates[curr];
+
+            salesValue.textContent = `${sales} Sale${sales > 1 ? 's' : ''} / Day`;
+
+            const weekly = sales * 7 * rateObj.perSale;
+            const monthly = sales * 30 * rateObj.perSale;
+
+            weeklyEarnings.textContent = `${rateObj.symbol}${weekly.toLocaleString()}`;
+            monthlyEarnings.textContent = `${rateObj.symbol}${monthly.toLocaleString()}`;
+
+            // Update landing page display prices matching currency
+            displayPrice.textContent = rateObj.price;
+            regularPrice.textContent = rateObj.regular;
+        }
+
+        salesSlider.addEventListener('input', updateCalculator);
+        currencySelect.addEventListener('change', updateCalculator);
+
+        // Simple Toast Notification helper
+        function showNotice(msg) {
+            const toast = document.createElement('div');
+            toast.className = 'fixed bottom-20 left-1/2 transform -translate-x-1/2 bg-brand-gold text-black px-6 py-3 rounded-xl font-bold text-xs shadow-2xl z-50 animate-bounce';
+            toast.textContent = msg;
+            document.body.appendChild(toast);
+            setTimeout(() => toast.remove(), 3000);
+        }
+    </script>
+</body>
+</html>
